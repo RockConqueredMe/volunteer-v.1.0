@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Volunteer' });
 });
 
-router.get('/home', function(req, res, next){
-  res.render('home', {title: 'Home'});
-});
+// router.get('/home', function(req, res, next){
+//   res.render('home', {title: 'Home'});
+// });
 
 router.get('/signup', function(req, res, next){
   res.render('signup', {title: 'Sign-Up'});
