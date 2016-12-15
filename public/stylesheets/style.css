@@ -37,3 +37,8 @@ nav.navbar.navbar-default.navbar-fixed-top {
   background-color: #333333;
   float: left;
 }
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: white;
+  background-color: #00ccff;
+}
