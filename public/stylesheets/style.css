@@ -37,14 +37,3 @@ nav.navbar.navbar-default.navbar-fixed-top {
   background-color: #333333;
   float: left;
 }
-
-footer {
-  text-align: center;
-  background-color: #333333;
-  color: white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-}
