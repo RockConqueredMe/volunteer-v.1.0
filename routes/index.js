@@ -37,7 +37,7 @@ res.redirect('/event');
 router.get('/get-data', function(req,res,next){
   Work.find()
     .then(function(doc){
-      res.render('create', {items: doc});
+      res.render('event', {items: doc});
     });
 });
 
