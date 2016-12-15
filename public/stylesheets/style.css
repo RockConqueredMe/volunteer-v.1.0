@@ -1,5 +1,9 @@
 body {
 background-color: #;
+position: relative;
+ margin: 0;
+ padding-bottom: 6rem;
+ min-height: 100%;
 }
 
 a {
@@ -32,4 +36,15 @@ p {
 nav.navbar.navbar-default.navbar-fixed-top {
   background-color: #333333;
   float: left;
+}
+
+footer {
+  text-align: center;
+  background-color: #333333;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
