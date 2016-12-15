@@ -33,7 +33,7 @@ res.redirect('/event');
 //res.render('new',{items: doc});
 });
 
-
+//show data
 router.get('/get-data', function(req,res,next){
   Work.find()
     .then(function(doc){
@@ -41,6 +41,7 @@ router.get('/get-data', function(req,res,next){
     });
 });
 
+//delete data
 router.get('/delete-data', function(req,res,next){
   Work.find()
     .then(function(doc){
@@ -64,22 +65,22 @@ router.get('/deletebtn/:id', function(req,res,next){
 });
 
 //update (CRUD)
-router.post('/update', function(req,res,next){
-  var id = req.body.id;
-
-  Work.findById(id, function(err,doc){
-    if(err){
-      console.error('error, no entry found');
-    }
-
-      doc.title = req.body.title;
-      doc.typeOfWork = req.body.typeOfWork;
-      doc.dateOfService = req.body.dateOfService;
-      doc.hours = req.body.hours;
-      doc.save();
-  });
-  res.redirect('/');
-});
+// router.post('/update', function(req,res,next){
+//   var id = req.body.id;
+//
+//   Work.findById(id, function(err,doc){
+//     if(err){
+//       console.error('error, no entry found');
+//     }
+//
+//       doc.title = req.body.title;
+//       doc.typeOfWork = req.body.typeOfWork;
+//       doc.dateOfService = req.body.dateOfService;
+//       doc.hours = req.body.hours;
+//       doc.save();
+//   });
+//   res.redirect('/');
+// });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
