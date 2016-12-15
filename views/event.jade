@@ -2,6 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  
-  h3 Event
+  section.get
+    h3 Get data
+    a(href="/get-data") See Events
+    div
+      for item in items
+        article.item
+          div Title: #{item.title}
+          div Type Of Work: #{item.typeOfWork}
+          div Date Of Service: #{item.dateOfService}
+          div Hours Required: #{item.hours}

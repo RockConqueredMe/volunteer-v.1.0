@@ -2,7 +2,35 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  
-  h3 Create events
-    s
+    body
+      div.content
+        h2 Manage Your Event
+        section.insert
+          h3 Insert data
+          form(action="/insert", method="post")
+            div.input
+              label(for="title") Title
+              input(type="text", id="title", name="title")
+            div.input
+              label(for="typeOfWork") Type Of Work
+              input(type="text", id="typeOfWork", name="typeOfWork")
+            div.input
+              label(for="dateOfService") Date Of Service
+              input(type="text", id="dateOfService", name="dateOfService")
+            div.input
+              label(for="hours") Hours
+              input(type="text", id="hours", name="hours")
+            button(type="submit") INSERT  
+        section.get
+          h3 Delete Event
+          a(href="/delete-data") Delete Events
+          div
+            for item in items
+              article.item
+                div Title: #{item.title}
+                div Type Of Work: #{item.typeOfWork}
+                div Date Of Service: #{item.dateOfService}
+                div Hours Required: #{item.hours}
+                  a(href="/deletebtn/#{item._id}") DELETE        
+        
+      
