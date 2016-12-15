@@ -41,6 +41,13 @@ router.get('/get-data', function(req,res,next){
     });
 });
 
+router.get('/delete-data', function(req,res,next){
+  Work.find()
+    .then(function(doc){
+      res.render('create', {items: doc});
+    });
+});
+
 //get (CRUD)
 router.get('/data', function(req,res,next){
   Work.find()
