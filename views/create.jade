@@ -4,6 +4,49 @@ block content
   h1= title
     body
       div.content
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        h2 Create Your Event
+        section.get
+          h3 Get data
+          a(href="/get-data") LOAD DATA
+          div
+            for item in items
+              article.item
+                div Title: #{item.title}
+                div Type Of Work: #{item.typeOfWork}
+                div Date Of Service: #{item.dateOfService}
+                div Hours Required: #{item.hours}
+                  a(href="/deletebtn/#{item._id}") DELETE
+                section.update
+        h3 Update data
+        form(action="/update", method="post")
+          div.input
+            label(for='title') Title
+            input(type="text", id="title", name="title")
+          div.input
+            label(for="typeOfWork") Type Of Work
+            input(type="text", id="typeOfWork", name="typeOfWork")
+          div.input
+            label(for="dateOfService") Date of Service
+            input(type="text", id="dateOfService", name="dateOfService")
+          div.input
+            label(for="hours") Hours
+            input(type="text", id="hours", name="hours")
+          button(type="submit") UPDATE
+          section.insert
+        h3 Insert data
+        form(action="/insert", method="post")
+          div.input
+            label(for="title") Title
+            input(type="text", id="title", name="title")
+          div.input
+            label(for="typeOfWork") Type Of Work
+            input(type="text", id="typeOfWork", name="typeOfWork")
+          div.input
+            label(for="dateOfService") Date Of Service
+            input(type="text", id="dateOfService", name="dateOfService")
+          div.input
+            label(for="hours") Hours
+            input(type="text", id="hours", name="hours")
+          button(type="submit") INSERT          
+        
       
